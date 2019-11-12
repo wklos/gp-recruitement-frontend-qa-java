@@ -17,12 +17,12 @@ public class CookieBannerTest {
     /**
     * COOKIE BANNER COMPONENT
     * 
-    * Cookie banner is displayed when the player is navigates to the site for the first time
+    * Cookie banner is displayed when player navigates to the site for the first time
     *
-    * Cookie banner should be not displayed after clicking on [ACCEPT AND CLOSE] button
-    * This is a cookie based solution (if the cookie will be deleted, banner will displayed once again)
+    * Cookie banner should not be displayed after clicking on [ACCEPT AND CLOSE] button
+    * This is a cookie based solution (when the cookie is deleted, banner will be displayed once again)
     * 
-    * Cookie banner is translated to all supported Casino web site languages
+    * Cookie banner is translated to all supported Casino website languages
     * 
     * After clicking on [COOKIE POLICY] link the "William Hill Cookie Policy" page is opened in a new tab
     * 
@@ -62,12 +62,12 @@ public class CookieBannerTest {
         System.out.println("Click on cookie banner");
         cookieBannerButton.click();
         System.out.println("Verify cookie banner is not displayed after click");
-        assertFalse(checkVisibilityofElement(cookieBanner));
+        assertFalse(checkVisibilityOfElement(cookieBanner));
         
     }
     
 
-    private boolean checkVisibilityofElement(WebElement element) {
+    private boolean checkVisibilityOfElement(WebElement element) {
         try {
             element.isDisplayed();
             return true;
